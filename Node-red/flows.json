@@ -1,0 +1,67 @@
+[
+    {
+        "id": "a0c82d7ed42abaf4",
+        "type": "tab",
+        "label": "Painel",
+        "disabled": false,
+        "info": "Painel central da aplicação.",
+        "env": []
+    },
+    {
+        "id": "31cfe6291ef38e54",
+        "type": "comment",
+        "z": "a0c82d7ed42abaf4",
+        "name": "Página web",
+        "info": "Página pessoal de treinamento.",
+        "x": 190,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "9a82b5c55135ffd1",
+        "type": "http in",
+        "z": "a0c82d7ed42abaf4",
+        "name": "inicio",
+        "url": "/home",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "2b5bbba0434702ed"
+            ]
+        ]
+    },
+    {
+        "id": "a6426bd7dc2e9f33",
+        "type": "http response",
+        "z": "a0c82d7ed42abaf4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 450,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2b5bbba0434702ed",
+        "type": "template",
+        "z": "a0c82d7ed42abaf4",
+        "name": "inicio",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"pt-br\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Bem vindo!</title>\n</head>\n<body>\n    <h1>Bem vindo a minha página!!!</h1>\n</body>\n</html>",
+        "output": "str",
+        "x": 310,
+        "y": 100,
+        "wires": [
+            [
+                "a6426bd7dc2e9f33"
+            ]
+        ]
+    }
+]
